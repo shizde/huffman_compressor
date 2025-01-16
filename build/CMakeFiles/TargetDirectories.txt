@@ -1,0 +1,7 @@
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/huffman_tree.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/compression.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/decompression.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/compress.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/decompress.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/edit_cache.dir
+/home/shizde/Projects/huffman_compressor/build/CMakeFiles/rebuild_cache.dir
