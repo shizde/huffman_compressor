@@ -11,6 +11,7 @@ HuffmanCompressor is a C++ project that implements Huffman coding for file compr
 
 ## Project Structure
 
+```
 HuffmanCompressor/ 
 ├── CMakeLists.txt 
 ├── README.md 
@@ -22,7 +23,7 @@ HuffmanCompressor/
 ├── decompression.cpp 
 ├── main_compress.cpp 
 └── main_decompress.cpp
-
+```
 
 ## Getting Started
 
