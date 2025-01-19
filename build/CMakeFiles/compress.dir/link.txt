@@ -1,1 +1,1 @@
-/sbin/c++ -Wl,--dependency-file=CMakeFiles/compress.dir/link.d CMakeFiles/compress.dir/main_compress.cpp.o -o compress  libhuffman_tree.a libcompression.a
+/sbin/c++ -Wl,--dependency-file=CMakeFiles/compress.dir/link.d CMakeFiles/compress.dir/main_compress.cpp.o -o compress  libhuffman_tree.a libcompression.a libhuffman_tree.a

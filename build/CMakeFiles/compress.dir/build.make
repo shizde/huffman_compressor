@@ -98,6 +98,7 @@ compress: CMakeFiles/compress.dir/build.make
 compress: CMakeFiles/compress.dir/compiler_depend.ts
 compress: libhuffman_tree.a
 compress: libcompression.a
+compress: libhuffman_tree.a
 compress: CMakeFiles/compress.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shizde/Projects/huffman_compressor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable compress"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compress.dir/link.txt --verbose=$(VERBOSE)

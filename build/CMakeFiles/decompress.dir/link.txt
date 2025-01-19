@@ -1,1 +1,1 @@
-/sbin/c++ -Wl,--dependency-file=CMakeFiles/decompress.dir/link.d CMakeFiles/decompress.dir/main_decompress.cpp.o -o decompress  libhuffman_tree.a libdecompression.a
+/sbin/c++ -Wl,--dependency-file=CMakeFiles/decompress.dir/link.d CMakeFiles/decompress.dir/main_decompress.cpp.o -o decompress  libhuffman_tree.a libdecompression.a libhuffman_tree.a

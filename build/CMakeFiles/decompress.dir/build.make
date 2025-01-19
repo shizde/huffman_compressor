@@ -98,6 +98,7 @@ decompress: CMakeFiles/decompress.dir/build.make
 decompress: CMakeFiles/decompress.dir/compiler_depend.ts
 decompress: libhuffman_tree.a
 decompress: libdecompression.a
+decompress: libhuffman_tree.a
 decompress: CMakeFiles/decompress.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shizde/Projects/huffman_compressor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable decompress"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/decompress.dir/link.txt --verbose=$(VERBOSE)

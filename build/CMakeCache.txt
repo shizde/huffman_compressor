@@ -224,6 +224,12 @@ HuffmanCompressor_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 HuffmanCompressor_SOURCE_DIR:STATIC=/home/shizde/Projects/huffman_compressor
 
+//Dependencies for the target
+compression_LIB_DEPENDS:STATIC=general;huffman_tree;
+
+//Dependencies for the target
+decompression_LIB_DEPENDS:STATIC=general;huffman_tree;
+
 
 ########################
 # INTERNAL cache entries

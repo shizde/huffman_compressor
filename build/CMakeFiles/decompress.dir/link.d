@@ -1,10 +1,10 @@
-compress: \
+decompress: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
-  CMakeFiles/compress.dir/main_compress.cpp.o \
+  CMakeFiles/decompress.dir/main_decompress.cpp.o \
   libhuffman_tree.a \
-  libcompression.a \
+  libdecompression.a \
   libhuffman_tree.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libm.so \
@@ -40,11 +40,11 @@ compress: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o:
 
-CMakeFiles/compress.dir/main_compress.cpp.o:
+CMakeFiles/decompress.dir/main_decompress.cpp.o:
 
 libhuffman_tree.a:
 
-libcompression.a:
+libdecompression.a:
 
 libhuffman_tree.a:
 
