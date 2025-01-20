@@ -62,3 +62,10 @@ jobs:
     - name: Test
       working-directory: build
       run: ctest --output-on-failure --config ${{ matrix.build_type }}
+
+    - name: Capture build logs
+      if: failure()
+      run: |
+        echo "Build failed. Capturing logs..."
+        cat build/CMakeFiles/CMakeOutput.log
+        cat build/CMakeFiles/CMakeError.log
