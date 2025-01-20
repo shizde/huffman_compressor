@@ -34,22 +34,25 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set reusable strings
-      id: strings
-      shell: bash
+    - name: Set up CMake
       run: |
-        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+        if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+          choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --no-progress
+        else
+          sudo apt-get update
+          sudo apt-get install -y cmake
+        fi
 
     - name: Configure CMake
       run: |
-        cmake -B ${{ steps.strings.outputs.build-output-dir }} \
+        cmake -B build \
               -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} \
               -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-              -S ${{ github.workspace }}
+              -S .
 
     - name: Build
-      run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
+      run: cmake --build build --config ${{ matrix.build_type }}
 
     - name: Test
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}
-      run: ctest --build-config ${{ matrix.build_type }}
+      working-directory: build
+      run: ctest --output-on-failure --config ${{ matrix.build_type }}
