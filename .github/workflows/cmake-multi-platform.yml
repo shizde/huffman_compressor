@@ -14,15 +14,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        build_type: [Release]
-        cpp_compiler: [g++, clang++, cl]
-        include:
-          - os: windows-latest
-            cpp_compiler: cl
-          - os: ubuntu-latest
-            cpp_compiler: g++
-          - os: ubuntu-latest
-            cpp_compiler: clang++
+        build_type: [Release, Debug]
+        cpp_compiler:
+          - g++
+          - clang++
+          - cl
         exclude:
           - os: windows-latest
             cpp_compiler: g++
@@ -59,9 +55,14 @@ jobs:
     - name: Build
       run: cmake --build build --config ${{ matrix.build_type }}
 
-    - name: Test
+    - name: Run tests
       working-directory: build
-      run: ctest --output-on-failure --config ${{ matrix.build_type }}
+      run: |
+        if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+          ctest -C ${{ matrix.build_type }} --output-on-failure
+        else
+          ctest --output-on-failure
+        fi
 
     - name: Capture build logs
       if: failure()
